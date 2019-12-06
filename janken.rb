@@ -44,8 +44,8 @@ class Janken
       puts "引き分けです。もう一度じゃんけんしましょう。"
       player = Player.new
       enemy = Enemy.new
-      player.hand
-      enemy.hand
+      janken = Janken.new
+      janken.pon(player.hand, enemy.hand)
     end
   end
 end
