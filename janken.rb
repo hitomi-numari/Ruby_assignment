@@ -1,11 +1,11 @@
 # require 'byebug'
 
 class Interface
-  def first
+  def beginning
    puts "数字を入力してください。"
   end
 
-  def again
+  def error
     puts "値が不正です。もう一度入力してください。"
   end
 
@@ -34,7 +34,7 @@ class Janken
     #ponを定義する時に引数を２つ受け取った状態にしているから。
     if player_hand != "0" && player_hand != "1" && player_hand != "2"
       interface = Interface.new
-      interface.again
+      interface.error
       rock_scissors_paper = Rock_scissors_paper.new
       rock_scissors_paper.rock_scissors_paper
     else
@@ -73,6 +73,6 @@ end
 
 #ファイルを呼び出す時下記が呼び出される。(表示したい順番厳守)
 interface = Interface.new
-interface.first
+interface.beginning
 rock_scissors_paper = Rock_scissors_paper.new
 rock_scissors_paper.rock_scissors_paper
